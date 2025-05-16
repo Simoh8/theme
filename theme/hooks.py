@@ -31,6 +31,47 @@ app_license = "mit"
 # include js, css files in header of web template
 # web_include_css = "/assets/theme/css/theme.css"
 # web_include_js = "/assets/theme/js/theme.js"
+# Add this to your existing hooks.py
+# Set the home page
+home_page = "home"
+
+# website_context = {
+#     "favicon": "images/LEDGRCTRLLogo.png",
+#     "splash_image": "images/LEDGRCTRLLogo.png",
+#     "brand_html": "<img src='images/LEDGRCTRLLogo.png' alt='LedgerCtrl' height='120'>"
+# }
+
+website_route_rules = [
+    {"from_route": "/", "to_route": "home"},
+]
+
+# website_css = [
+#     "/assets/theme/css/bootstrap.min.css",
+#     "/assets/theme/css/font-awesome.min.css",
+#     "/assets/theme/css/theme.css",
+#     "/assets/theme/css/animate.css"
+# ]
+
+# website_js = [
+#     "/assets/theme/js/theme.js",
+#     "/assets/theme/js/wow.min.js"
+# ]
+
+
+# website_context = {
+# 	"favicon": "/assets/theme/images/favicon.png",
+# 	"splash_image": "/assets/theme/images/logo.png"
+# }
+
+# Website user home page (by Role)
+# website_user_home_page = {
+#	"Role": "home_page"
+# }
+
+
+# Setup Wizard
+# setup_wizard_requires = "assets/ledgerctrl_website/setup_wizard.js"
+
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "theme/public/scss/website"

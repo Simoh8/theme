@@ -1,0 +1,149 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Industries We Serve | LedgerCtrl{% endblock %}
+
+{% block page_content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background: linear-gradient(rgba(46, 134, 171, 0.8), url('/assets/theme/images/industries-hero.jpg') center/cover);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1 class="wow fadeInUp">Industry-Specific ERP Solutions</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.2s">Tailored solutions designed for your industry's unique challenges</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Industries List Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Our Industry Expertise</h2>
+                <p class="section-subtitle">We understand that every industry has unique requirements</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Manufacturing -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fa fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Streamline production, inventory, and supply chain with our specialized manufacturing ERP modules.</p>
+                    <ul class="industry-features">
+                        <li>Production planning</li>
+                        <li>Shop floor control</li>
+                        <li>Quality management</li>
+                        <li>Maintenance management</li>
+                    </ul>
+                    <a href="/industries/manufacturing" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Retail -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fa fa-shopping-bag"></i>
+                    </div>
+                    <h3>Retail</h3>
+                    <p>Manage multi-channel sales, inventory, and customer relationships seamlessly.</p>
+                    <ul class="industry-features">
+                        <li>Point of Sale integration</li>
+                        <li>Inventory optimization</li>
+                        <li>Customer loyalty programs</li>
+                        <li>E-commerce integration</li>
+                    </ul>
+                    <a href="/industries/retail" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Healthcare -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fa fa-hospital"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Compliant solutions for healthcare providers and medical facilities.</p>
+                    <ul class="industry-features">
+                        <li>Patient management</li>
+                        <li>Medical inventory</li>
+                        <li>HIPAA compliance</li>
+                        <li>Billing and claims</li>
+                    </ul>
+                    <a href="/industries/healthcare" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <p>Administrative solutions for schools, colleges, and training institutions.</p>
+                    <ul class="industry-features">
+                        <li>Student information system</li>
+                        <li>Fee management</li>
+                        <li>Faculty management</li>
+                        <li>Resource planning</li>
+                    </ul>
+                    <a href="/industries/education" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Professional Services -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <h3>Professional Services</h3>
+                    <p>Optimize project delivery and resource allocation for service businesses.</p>
+                    <ul class="industry-features">
+                        <li>Project accounting</li>
+                        <li>Time tracking</li>
+                        <li>Resource management</li>
+                        <li>Client portals</li>
+                    </ul>
+                    <a href="/industries/professional-services" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- Non-Profit -->
+            <div class="col-lg-4 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fa fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Non-Profit</h3>
+                    <p>Specialized solutions for donor management and program tracking.</p>
+                    <ul class="industry-features">
+                        <li>Donor management</li>
+                        <li>Grant tracking</li>
+                        <li>Program accounting</li>
+                        <li>Volunteer management</li>
+                    </ul>
+                    <a href="/industries/non-profit" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4">Don't See Your Industry Listed?</h2>
+        <p class="lead mb-5">Our flexible platform can be customized to meet your specific requirements.</p>
+        <a href="/contact" class="btn btn-primary btn-lg mr-3">Contact Us</a>
+        <a href="/request-demo" class="btn btn-outline-primary btn-lg">Request Demo</a>
+    </div>
+</section>
+{% endblock %}

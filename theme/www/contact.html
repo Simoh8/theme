@@ -1,0 +1,184 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Contact Us | LedgerCtrl{% endblock %}
+
+{% block page_content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background: linear-gradient(rgba(46, 134, 171, 0.8), url('/assets/theme/images/contact-hero.jpg') center/cover);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1 class="wow fadeInUp">Get in Touch</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.2s">We'd love to hear from you</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mb-4 mb-lg-0 wow fadeIn">
+                <h2 class="section-title mb-4">Contact Information</h2>
+                <p>Have questions about our products or services? Our team is here to help.</p>
+                
+                <div class="contact-info mt-5">
+                    <div class="media mb-4">
+                        <div class="contact-icon mr-4">
+                            <i class="fa fa-map-marker-alt"></i>
+                        </div>
+                        <div class="media-body">
+                            <h5>Our Office</h5>
+                            <p>Nairobi Garage - Ngong Road PQ2V+M5C, Kamburu Dr <br>Nairobi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media mb-4">
+                        <div class="contact-icon mr-4">
+                            <i class="fa fa-phone-alt"></i>
+                        </div>
+                        <div class="media-body">
+                            <h5>Phone</h5>
+                            <p>+254 702 -812 -065</p>
+                            <p>+254 795 -757 -500<br>Mon-Fri, 9am-5pm EAT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media mb-4">
+                        <div class="contact-icon mr-4">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="media-body">
+                            <h5>Email</h5>
+                            <p>Admin@ledgerctrl.com<br>support@ledgerctrl.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="media">
+                        <div class="contact-icon mr-4">
+                            <i class="fa fa-comments"></i>
+                        </div>
+                        <div class="media-body">
+                            <h5>Live Chat</h5>
+                            <p>Available during business hours</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-media mt-5">
+                    <h5 class="mb-3">Follow Us</h5>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="col-lg-7 wow fadeInUp">
+                <div class="card shadow-sm">
+                    <div class="card-body p-5">
+                        <h2 class="section-title mb-4">Send Us a Message</h2>
+                        <form id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Full Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="subscribe" name="subscribe" checked>
+                                    <label class="custom-control-label" for="subscribe">Subscribe to our newsletter</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-0">
+    <div class="container-fluid px-0">
+        <div class="row no-gutters">
+            <div class="col-12">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d127642.63591222427!2d36.634402675006385!3d-1.2737876625208693!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf3efffff%3A0x111775bb295f8d1f!2sNairobi%20Garage%20-%20Ngong%20Road!5e0!3m2!1sen!2ske!4v1747412979998!5m2!1sen!2ske" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1380533895675!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDQ2JzI5LjYiTiAxMjLCsDI1JzA5LjkiVw!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Offices Section -->
+<!-- <section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Our Global Offices</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 wow fadeInUp">
+                <div class="office-card text-center">
+                    <div class="office-icon mb-3">
+                        <i class="fa fa-map-marker-alt"></i>
+                    </div>
+                    <h4>San Francisco</h4>
+                    <p>123 Business Avenue<br>Suite 100<br>San Francisco, CA 94107</p>
+                    <p><i class="fa fa-phone mr-2"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="office-card text-center">
+                    <div class="office-icon mb-3">
+                        <i class="fa fa-map-marker-alt"></i>
+                    </div>
+                    <h4>New York</h4>
+                    <p>456 Enterprise Street<br>Floor 15<br>New York, NY 10001</p>
+                    <p><i class="fa fa-phone mr-2"></i> +1 (555) 987-6543</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="office-card text-center">
+                    <div class="office-icon mb-3">
+                        <i class="fa fa-map-marker-alt"></i>
+                    </div>
+                    <h4>London</h4>
+                    <p>789 Innovation Road<br>London EC1A 1AA<br>United Kingdom</p>
+                    <p><i class="fa fa-phone mr-2"></i> +44 20 7946 0958</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Get Started?</h2>
+        <p class="lead mb-5">Contact us today to learn how LedgerCtrl can help your business grow.</p>
+        <a href="/request-demo" class="btn btn-light btn-lg mr-3">Request Demo</a>
+        <a href="tel:+15551234567" class="btn btn-outline-light btn-lg"><i class="fa fa-phone mr-2"></i> Call Us Now</a>
+    </div>
+</section>
+{% endblock %}

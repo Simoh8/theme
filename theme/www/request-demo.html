@@ -1,0 +1,179 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Request a Demo | LedgerCtrl{% endblock %}
+
+{% block page_content %}
+<!-- Hero Section -->
+<section class="hero-section" >
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1 class="wow fadeInUp">See LedgerCtrl in Action</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.2s">Schedule a personalized demo with our experts and discover how our ERP solution can transform your business.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo Form Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-5">
+                            <h2 class="section-title">Request Your Demo</h2>
+                            <p class="text-muted">Fill out the form below and our team will contact you to schedule a demo at your convenience.</p>
+                        </div>
+                        
+                        <form id="demo-request-form">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="full-name">Full Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="full-name" name="full_name" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="company">Company <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="company" name="company" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="job-title">Job Title</label>
+                                <input type="text" class="form-control" id="job-title" name="job_title">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="industry">Industry <span class="text-danger">*</span></label>
+                                <select class="form-control" id="industry" name="industry" required>
+                                    <option value="" selected disabled>Select your industry</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Financial Services">Financial Services</option>
+                                    <option value="Professional Services">Professional Services</option>
+                                    <option value="Technology">Technology</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Which solutions are you interested in? <span class="text-danger">*</span></label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="accounting" name="solutions" value="Accounting">
+                                            <label class="custom-control-label" for="accounting">Accounting</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="inventory" name="solutions" value="Inventory">
+                                            <label class="custom-control-label" for="inventory">Inventory</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="hr-payroll" name="solutions" value="HR & Payroll">
+                                            <label class="custom-control-label" for="hr-payroll">HR & Payroll</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="crm" name="solutions" value="CRM">
+                                            <label class="custom-control-label" for="crm">CRM</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="project" name="solutions" value="Project Management">
+                                            <label class="custom-control-label" for="project">Project Management</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox mb-2">
+                                            <input type="checkbox" class="custom-control-input" id="full-suite" name="solutions" value="Full ERP Suite">
+                                            <label class="custom-control-label" for="full-suite">Full ERP Suite</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Tell us about your business needs</label>
+                                <textarea class="form-control" id="message" name="message" rows="4"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="subscribe" name="subscribe" checked>
+                                    <label class="custom-control-label" for="subscribe">Subscribe to our newsletter for updates and insights</label>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">Request Demo</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Demo Benefits Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">What to Expect in Your Demo</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 wow fadeInUp">
+                <div class="feature-card text-center h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fa fa-calendar-check"></i>
+                    </div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Choose a time that works best for you - we'll accommodate your schedule.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-card text-center h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fa fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Personalized Walkthrough</h3>
+                    <p>We'll focus on the features and workflows most relevant to your business.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="feature-card text-center h-100">
+                    <div class="feature-icon mx-auto">
+                        <i class="fa fa-question-circle"></i>
+                    </div>
+                    <h3>Q&A Session</h3>
+                    <p>Get all your questions answered by our product experts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Have Questions Before Scheduling?</h2>
+        <p class="lead mb-5">Our team is happy to help you determine if LedgerCtrl is the right solution for your needs.</p>
+        <a href="/contact" class="btn btn-light btn-lg mr-3">Contact Us</a>
+        <a href="tel:+15551234567" class="btn btn-outline-light btn-lg"><i class="fa fa-phone mr-2"></i> Call Now</a>
+    </div>
+</section>
+{% endblock %}

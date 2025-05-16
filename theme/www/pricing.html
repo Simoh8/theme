@@ -1,0 +1,206 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Pricing Plans | LedgerCtrl{% endblock %}
+
+{% block page_content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background: linear-gradient(rgba(46, 134, 171, 0.8), url('/assets/theme/images/pricing-hero.jpg') center/cover);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1 class="wow fadeInUp">Simple, Transparent Pricing</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.2s">Choose the plan that fits your business needs</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Plans Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-primary active">
+                        <input type="radio" name="pricing-option" id="monthly" autocomplete="off" checked> Monthly Billing
+                    </label>
+                    <label class="btn btn-outline-primary">
+                        <input type="radio" name="pricing-option" id="annual" autocomplete="off"> Annual Billing (Save 20%)
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Starter Plan -->
+            <div class="col-lg-4 mb-4 wow fadeInUp">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p class="text-muted">For small businesses getting started</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">25</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="price-annual d-none">
+                            <span class="currency">$</span>
+                            <span class="amount">59</span>
+                            <span class="period">/month</span>
+                            <small class="text-muted d-block">billed annually</small>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Up to 5 users</li>
+                            <li>Basic Accounting</li>
+                            <li>Inventory Management</li>
+                            <li>CRM Module</li>
+                            <li>Email Support</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="/signup?plan=starter" class="btn btn-outline-primary btn-block">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Plan -->
+            <div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <p class="text-muted">For growing businesses</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="price-annual d-none">
+                            <span class="currency">$</span>
+                            <span class="amount">79</span>
+                            <span class="period">/month</span>
+                            <small class="text-muted d-block">billed annually</small>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Up to 20 users</li>
+                            <li>Advanced Accounting</li>
+                            <li>Inventory + Manufacturing</li>
+                            <li>Full CRM</li>
+                            <li>HR & Payroll</li>
+                            <li>Priority Support</li>
+                            <li>10 GB Storage</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="/signup?plan=professional" class="btn btn-primary btn-block">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enterprise Plan -->
+            <div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <p class="text-muted">For large organizations</p>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">199</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <div class="price-annual d-none">
+                            <span class="currency">$</span>
+                            <span class="amount">159</span>
+                            <span class="period">/month</span>
+                            <small class="text-muted d-block">billed annually</small>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Unlimited users</li>
+                            <li>Full Accounting Suite</li>
+                            <li>Advanced Manufacturing</li>
+                            <li>Project Management</li>
+                            <li>Custom Modules</li>
+                            <li>24/7 Support</li>
+                            <li>100 GB Storage</li>
+                            <li>Dedicated Account Manager</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="/contact?plan=enterprise" class="btn btn-outline-primary btn-block">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="pricing-faq">
+                    <h4 class="mb-4">Frequently Asked Questions</h4>
+                    
+                    <div class="accordion" id="pricingFAQ">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Is there a free trial available?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#pricingFAQ">
+                                <div class="card-body">
+                                    Yes, we offer a 14-day free trial for all our plans with no credit card required. You can explore all features during this period.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Can I change plans later?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#pricingFAQ">
+                                <div class="card-body">
+                                    Absolutely! You can upgrade or downgrade your plan at any time. Changes will be prorated based on your billing cycle.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        What payment methods do you accept?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#pricingFAQ">
+                                <div class="card-body">
+                                    We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and bank transfers for annual payments.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Need Custom Pricing?</h2>
+        <p class="lead mb-5">We offer customized solutions for businesses with unique requirements.</p>
+        <a href="/contact" class="btn btn-light btn-lg">Contact Our Sales Team</a>
+    </div>
+</section>
+{% endblock %}

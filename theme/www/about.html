@@ -1,0 +1,164 @@
+{% extends "templates/web.html" %}
+
+{% block title %}About LedgerCtrl | Our Story{% endblock %}
+
+{% block page_content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background: linear-gradient(rgba(46, 134, 171, 0.8), url('/assets/theme/images/about-hero.jpg') center/cover);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1 class="wow fadeInUp">Our Story</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.2s">Building the future of business management software</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 wow fadeIn">
+                <img src="images/LEDGRCTRLLogo.png" alt="About LedgerCtrl" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6 wow fadeInUp">
+                <h2 class="section-title">Who We Are</h2>
+                <p>Founded in 2015, LedgerCtrl has grown from a small startup to a leading provider of ERP solutions for businesses of all sizes. Our mission is to simplify complex business processes through intuitive, powerful software.</p>
+                <p>With headquarters in San Francisco and team members across three continents, we're proud to serve over 5,000 customers worldwide.</p>
+                
+                <div class="about-stats mt-4">
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Customers</div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Countries</div>
+                        </div>
+                        <div class="col-4 text-center">
+                            <div class="stat-number">99%</div>
+                            <div class="stat-label">Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Our Core Values</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 wow fadeInUp">
+                <div class="value-card text-center">
+                    <div class="value-icon">
+                        <i class="fa fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We constantly push boundaries to deliver cutting-edge solutions that solve real business problems.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="value-card text-center">
+                    <div class="value-icon">
+                        <i class="fa fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We build trust through transparency, honesty, and ethical business practices.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="value-card text-center">
+                    <div class="value-icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h3>Customer Focus</h3>
+                    <p>Our customers are at the heart of everything we do. Their success is our success.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<!-- <section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="section-title">Meet Our Leadership</h2>
+                <p class="section-subtitle">The passionate team behind LedgerCtrl</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp">
+                <div class="team-card">
+                    <img src="/assets/theme/images/team/ceo.jpg" alt="CEO" class="img-fluid">
+                    <div class="team-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO & Founder</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="team-card">
+                    <img src="/assets/theme/images/team/cto.jpg" alt="CTO" class="img-fluid">
+                    <div class="team-info">
+                        <h4>Michael Chen</h4>
+                        <p>Chief Technology Officer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="team-card">
+                    <img src="/assets/theme/images/team/cfo.jpg" alt="CFO" class="img-fluid">
+                    <div class="team-info">
+                        <h4>David Wilson</h4>
+                        <p>Chief Financial Officer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="team-card">
+                    <img src="/assets/theme/images/team/cmo.jpg" alt="CMO" class="img-fluid">
+                    <div class="team-info">
+                        <h4>Emily Rodriguez</h4>
+                        <p>Chief Marketing Officer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Join Our Team</h2>
+        <p class="lead mb-5">We're always looking for talented individuals to join our growing team.</p>
+        <a href="/careers" class="btn btn-light btn-lg">View Open Positions</a>
+    </div>
+</section>
+{% endblock %}

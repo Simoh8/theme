@@ -1,0 +1,197 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Blog | LedgerCtrl Insights{% endblock %}
+
+{% block page_content %}
+<!-- Hero Section -->
+<section class="hero-section" style="background: linear-gradient(rgba(46, 134, 171, 0.8), url('/assets/theme/images/blog-hero.jpg') center/cover);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center text-white">
+                <h1 class="wow fadeInUp">LedgerCtrl Blog</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.2s">Insights, tips, and news about ERP and business management</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Posts Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Featured Post -->
+                <div class="card mb-4 wow fadeIn">
+                    <img src="/assets/theme/images/blog/featured-post.jpg" class="card-img-top" alt="Featured Post">
+                    <div class="card-body">
+                        <div class="post-meta mb-3">
+                            <span class="post-category badge badge-primary">ERP Trends</span>
+                            <span class="post-date ml-2">June 15, 2023</span>
+                        </div>
+                        <h2 class="card-title"><a href="/blog/erp-trends-2023">Top ERP Trends to Watch in 2023</a></h2>
+                        <p class="card-text">Discover the key trends shaping the ERP landscape this year and how they can benefit your business. From AI integration to cloud-native solutions, we explore what's new and important.</p>
+                        <a href="/blog/erp-trends-2023" class="btn btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Posts Grid -->
+                <div class="row">
+                    <!-- Post 1 -->
+                    <div class="col-md-6 mb-4 wow fadeInUp">
+                        <div class="card h-100">
+                            <img src="/assets/theme/images/blog/post1.jpg" class="card-img-top" alt="Post 1">
+                            <div class="card-body">
+                                <div class="post-meta mb-2">
+                                    <span class="post-category badge badge-secondary">Inventory</span>
+                                    <span class="post-date ml-2">May 28, 2023</span>
+                                </div>
+                                <h3 class="card-title"><a href="/blog/inventory-optimization">5 Strategies for Inventory Optimization</a></h3>
+                                <p class="card-text">Learn how to reduce costs and improve efficiency with these proven inventory management techniques.</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="/blog/inventory-optimization" class="btn btn-sm btn-outline-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 2 -->
+                    <div class="col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card h-100">
+                            <img src="/assets/theme/images/blog/post2.jpg" class="card-img-top" alt="Post 2">
+                            <div class="card-body">
+                                <div class="post-meta mb-2">
+                                    <span class="post-category badge badge-success">Accounting</span>
+                                    <span class="post-date ml-2">May 15, 2023</span>
+                                </div>
+                                <h3 class="card-title"><a href="/blog/automate-accounting">How to Automate Your Accounting Processes</a></h3>
+                                <p class="card-text">Discover the tools and techniques to streamline your financial operations and reduce manual work.</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="/blog/automate-accounting" class="btn btn-sm btn-outline-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 3 -->
+                    <div class="col-md-6 mb-4 wow fadeInUp">
+                        <div class="card h-100">
+                            <img src="/assets/theme/images/blog/post3.jpg" class="card-img-top" alt="Post 3">
+                            <div class="card-body">
+                                <div class="post-meta mb-2">
+                                    <span class="post-category badge badge-info">Case Study</span>
+                                    <span class="post-date ml-2">April 30, 2023</span>
+                                </div>
+                                <h3 class="card-title"><a href="/blog/manufacturing-case-study">How XYZ Manufacturing Increased Efficiency by 40%</a></h3>
+                                <p class="card-text">A detailed look at how one company transformed their operations with LedgerCtrl's manufacturing module.</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="/blog/manufacturing-case-study" class="btn btn-sm btn-outline-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Post 4 -->
+                    <div class="col-md-6 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="card h-100">
+                            <img src="/assets/theme/images/blog/post4.jpg" class="card-img-top" alt="Post 4">
+                            <div class="card-body">
+                                <div class="post-meta mb-2">
+                                    <span class="post-category badge badge-warning">HR</span>
+                                    <span class="post-date ml-2">April 18, 2023</span>
+                                </div>
+                                <h3 class="card-title"><a href="/blog/remote-work-hr">Managing Remote Teams with HR Software</a></h3>
+                                <p class="card-text">Best practices for using HR technology to support and engage your distributed workforce.</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="/blog/remote-work-hr" class="btn btn-sm btn-outline-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <nav aria-label="Blog pagination">
+                    <ul class="pagination justify-content-center wow fadeIn">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+                <!-- Categories -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Categories</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><a href="/blog/category/erp-trends">ERP Trends</a></li>
+                            <li><a href="/blog/category/accounting">Accounting</a></li>
+                            <li><a href="/blog/category/inventory">Inventory</a></li>
+                            <li><a href="/blog/category/hr">HR & Payroll</a></li>
+                            <li><a href="/blog/category/crm">CRM</a></li>
+                            <li><a href="/blog/category/case-studies">Case Studies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Popular Posts -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Popular Posts</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="media mb-3">
+                            <img src="/assets/theme/images/blog/popular1.jpg" width="80" class="mr-3" alt="Popular 1">
+                            <div class="media-body">
+                                <h6 class="mt-0"><a href="/blog/erp-selection-guide">The Complete ERP Selection Guide</a></h6>
+                                <small class="text-muted">March 22, 2023</small>
+                            </div>
+                        </div>
+                        <div class="media mb-3">
+                            <img src="/assets/theme/images/blog/popular2.jpg" width="80" class="mr-3" alt="Popular 2">
+                            <div class="media-body">
+                                <h6 class="mt-0"><a href="/blog/cloud-vs-on-premise">Cloud vs. On-Premise: Which is Right for You?</a></h6>
+                                <small class="text-muted">February 15, 2023</small>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <img src="/assets/theme/images/blog/popular3.jpg" width="80" class="mr-3" alt="Popular 3">
+                            <div class="media-body">
+                                <h6 class="mt-0"><a href="/blog/data-migration-tips">5 Tips for Successful ERP Data Migration</a></h6>
+                                <small class="text-muted">January 30, 2023</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Subscribe to Newsletter</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Get the latest posts delivered right to your inbox.</p>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

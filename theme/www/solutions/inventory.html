@@ -1,0 +1,319 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Inventory Management Software | LedgerCtrl ERP{% endblock %}
+
+{% block page_content %}
+<!-- Hero Section -->
+<section class="solution-hero" style="background: linear-gradient(rgba(70, 130, 180, 0.9), url('images/stock-dashboard.png') center/cover);">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="text-white mb-4 wow fadeInUp">Intelligent Inventory Control</h1>
+                <p class="lead text-white mb-4 wow fadeInUp" data-wow-delay="0.2s">Optimize stock levels, reduce costs, and improve fulfillment with real-time inventory management.</p>
+                <div class="hero-buttons wow fadeInUp" data-wow-delay="0.4s">
+                    <a href="/request-demo" class="btn btn-primary btn-lg mr-3">Request Demo</a>
+                    <a href="#features" class="btn btn-outline-light btn-lg">Explore Features</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block wow fadeIn">
+                <img src="/images/stock-dashboard.png" alt="Inventory Dashboard" class="img-fluid hero-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Overview Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 wow fadeIn">
+                <img src="/images/stockoverview.png" alt="Inventory Overview" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6 wow fadeInUp">
+                <h2 class="section-title">End-to-End Inventory Management</h2>
+                <p>LedgerCtrl's inventory module provides complete visibility and control over your stock from procurement to fulfillment. Our solution helps you maintain optimal inventory levels while minimizing carrying costs.</p>
+                <ul class="solution-features-list">
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Real-time stock tracking across multiple locations</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Automated reorder points and purchase suggestions</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Barcode and QR code scanning support</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Batch and serial number tracking</li>
+                    <li><i class="fas fa-check-circle text-primary mr-2"></i> Integrated with accounting and procurement</li>
+                </ul>
+                <!-- <a href="/pricing" class="btn btn-outline-primary mt-3">View Pricing</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5 wow fadeInUp">
+                <h2 class="section-title">Powerful Inventory Features</h2>
+                <p class="section-subtitle">Comprehensive tools to manage your stock efficiently</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Feature 1 -->
+            <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-primary-light">
+                        <i class="fas fa-boxes text-primary"></i>
+                    </div>
+                    <h3>Multi-Warehouse Management</h3>
+                    <p>Track inventory across multiple locations with transfer orders, stock adjustments, and consolidated reporting.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-primary-light">
+                        <i class="fas fa-barcode text-primary"></i>
+                    </div>
+                    <h3>Barcode Scanning</h3>
+                    <p>Use barcode scanners or mobile devices to quickly receive, pick, pack, and ship items with reduced errors.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-primary-light">
+                        <i class="fas fa-undo-alt text-primary"></i>
+                    </div>
+                    <h3>Automated Reordering</h3>
+                    <p>Set minimum stock levels and let the system automatically generate purchase requisitions when inventory runs low.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-primary-light">
+                        <i class="fas fa-tags text-primary"></i>
+                    </div>
+                    <h3>Batch & Serial Tracking</h3>
+                    <p>Track items by batch or serial number for quality control, warranty management, and recall readiness.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 5 -->
+            <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-primary-light">
+                        <i class="fas fa-chart-pie text-primary"></i>
+                    </div>
+                    <h3>Inventory Analytics</h3>
+                    <p>Identify fast/slow moving items, calculate turnover ratios, and optimize stock levels with powerful reporting.</p>
+                </div>
+            </div>
+            
+            <!-- Feature 6 -->
+            <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="feature-card h-100">
+                    <div class="feature-icon bg-primary-light">
+                        <i class="fas fa-exchange-alt text-primary"></i>
+                    </div>
+                    <h3>Manufacturing Integration</h3>
+                    <p>Seamlessly connect inventory with production for material requirements planning (MRP) and shop floor control.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5 wow fadeInUp">
+                <h2 class="section-title">Business Benefits</h2>
+                <p class="section-subtitle">How our inventory solution helps your business</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4 wow fadeInUp">
+                <div class="benefit-card h-100">
+                    <div class="benefit-number">01</div>
+                    <h3>Reduced Stockouts</h3>
+                    <p>Maintain optimal inventory levels to prevent lost sales from out-of-stock situations while avoiding excess inventory.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="benefit-card h-100">
+                    <div class="benefit-number">02</div>
+                    <h3>Lower Carrying Costs</h3>
+                    <p>Reduce storage costs and minimize obsolete inventory with better demand forecasting and stock optimization.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="benefit-card h-100">
+                    <div class="benefit-number">03</div>
+                    <h3>Improved Accuracy</h3>
+                    <p>Eliminate manual counting errors with barcode scanning and real-time inventory tracking.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="benefit-card h-100">
+                    <div class="benefit-number">04</div>
+                    <h3>Faster Fulfillment</h3>
+                    <p>Streamline picking, packing, and shipping processes to improve order fulfillment speed and accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Integration Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 wow fadeIn">
+                <h2 class="section-title">Seamless Integrations</h2>
+                <p class="mb-4">LedgerCtrl Inventory connects with your existing business systems:</p>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="integration-list">
+                            <li><i class="fas fa-check text-primary mr-2"></i> Accounting & Finance</li>
+                            <li><i class="fas fa-check text-primary mr-2"></i> Procurement</li>
+                            <li><i class="fas fa-check text-primary mr-2"></i> Sales & CRM</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="integration-list">
+                            <li><i class="fas fa-check text-primary mr-2"></i> E-commerce Platforms</li>
+                            <li><i class="fas fa-check text-primary mr-2"></i> Shipping Carriers</li>
+                            <li><i class="fas fa-check text-primary mr-2"></i> Barcode Scanners</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <a href="/integrations" class="btn btn-outline-primary mt-3">View All Integrations</a> -->
+            </div>
+            <!-- <div class="col-lg-6 wow fadeInUp">
+                <img src="/assets/theme/images/solutions/inventory-integrations.png" alt="Inventory Integrations" class="img-fluid">
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<!-- <section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5 wow fadeInUp">
+                <h2 class="section-title text-white">Customer Success Stories</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 wow fadeInUp">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"After implementing LedgerCtrl Inventory, we reduced our stockouts by 75% and decreased excess inventory by 30%, saving over $200,000 annually."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/assets/theme/images/testimonials/testimonial4.jpg" alt="Client" class="rounded-circle">
+                        <div>
+                            <h5>Jennifer Lee</h5>
+                            <p>Operations Director, RetailChain</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The barcode scanning system cut our receiving time in half and eliminated counting errors that used to plague our monthly inventory audits."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/assets/theme/images/testimonials/testimonial5.jpg" alt="Client" class="rounded-circle">
+                        <div>
+                            <h5>Robert Garcia</h5>
+                            <p>Warehouse Manager, Distributor Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Having real-time visibility into inventory across our 5 locations has transformed how we manage allocations and transfers between stores."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/assets/theme/images/testimonials/testimonial6.jpg" alt="Client" class="rounded-circle">
+                        <div>
+                            <h5>Amanda Chen</h5>
+                            <p>VP Supply Chain, Fashion Retail Group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container text-center wow fadeInUp">
+        <h2 class="mb-4">Ready to Optimize Your Inventory?</h2>
+        <p class="lead mb-5">Discover how LedgerCtrl can help you achieve the perfect balance between stock availability and carrying costs.</p>
+        <div class="d-flex justify-content-center flex-wrap">
+            <a href="/request-demo" class="btn btn-primary btn-lg mx-3 mb-3">Request Demo</a>
+            <!-- <a href="/pricing" class="btn btn-outline-primary btn-lg mx-3 mb-3">View Pricing</a> -->
+            <a href="/contact" class="btn btn-secondary btn-lg mx-3 mb-3">Contact Sales</a>
+        </div>
+    </div>
+</section>
+
+<!-- Related Solutions Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5 wow fadeInUp">
+                <h2 class="section-title">Related Solutions</h2>
+                <p class="section-subtitle">Explore other modules that work seamlessly with Inventory</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-4 wow fadeInUp">
+                <div class="solution-card h-100">
+                    <div class="solution-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Accounting</h3>
+                    <p>Automatically post inventory transactions to your general ledger with accurate cost accounting.</p>
+                    <a href="/solutions/accounting" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="solution-card h-100">
+                    <div class="solution-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Connect inventory with production for complete material requirements planning (MRP).</p>
+                    <a href="/solutions/manufacturing" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="solution-card h-100">
+                    <div class="solution-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Sales & CRM</h3>
+                    <p>Give your sales team real-time inventory visibility to promise accurate delivery dates.</p>
+                    <a href="/solutions/crm" class="btn btn-sm btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
