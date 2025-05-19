@@ -45,18 +45,6 @@ website_route_rules = [
     {"from_route": "/", "to_route": "home"},
 ]
 
-# website_css = [
-#     "/assets/theme/css/bootstrap.min.css",
-#     "/assets/theme/css/font-awesome.min.css",
-#     "/assets/theme/css/theme.css",
-#     "/assets/theme/css/animate.css"
-# ]
-
-# website_js = [
-#     "/assets/theme/js/theme.js",
-#     "/assets/theme/js/wow.min.js"
-# ]
-
 
 # website_context = {
 # 	"favicon": "/assets/theme/images/favicon.png",

@@ -762,7 +762,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .team-card img {
-        height: 200px;
+        height: 150px;
     }
     
     .benefit-card {
@@ -776,9 +776,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Solution Page Specific Styles */
 .solution-hero {
+    padding-top: 300px;
     padding: 100px 0;
     position: relative;
-    color: white;
+    color: rgb(22, 22, 22);
 }
 
 .solution-hero h1 {
