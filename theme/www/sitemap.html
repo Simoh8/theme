@@ -1,0 +1,35 @@
+{% extends "templates/web.html" %}
+
+{% block title %}Website Sitemap - LedgerCtrl{% endblock %}
+{% block meta_description %}Complete list of all pages on the LedgerCtrl website. Find our ERP solutions, company information, and contact details.{% endblock %}
+
+{% block page_content %}
+<section class="container py-5">
+    <h1 class="mb-4">LedgerCtrl Website</h1>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="h4 mb-3">Main Pages</h2>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="/">Home</a></li>
+                <li class="mb-2"><a href="/about">About Us</a></li>
+                <li class="mb-2"><a href="/contact">Contact Us</a></li>
+                <li class="mb-2"><a href="/request-demo">Request Demo</a></li>
+            </ul>
+        </div>
+        
+        <div class="col-md-6">
+            <h2 class="h4 mb-3">Our Solutions</h2>
+            <ul class="list-unstyled">
+                <li class="mb-2"><a href="/solutions/accounting">Accounting & Financials</a></li>
+                <li class="mb-2"><a href="/solutions/inventory">Inventory Control</a></li>
+                <li class="mb-2"><a href="/solutions/hr-payroll">HR & Payroll System</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="mt-4">
+        <p>For search engines: <a href="/sitemap.xml">View XML Sitemap</a></p>
+    </div>
+</section>
+{% endblock %}
