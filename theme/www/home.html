@@ -1,85 +1,108 @@
 {% extends "templates/web.html" %}
 
-{% block title %}LedgerCtrl - Modern ERP Solutions{% endblock %}
+{% block title %}LedgerCtrl ERP Software | Accounting, Inventory & HR Solutions for Africa{% endblock %}
+
+{% block meta_block %}
+<!-- Primary Meta Tags -->
+<meta name="title" content="LedgerCtrl ERP | Business Management Software for African Enterprises">
+<meta name="description" content="LedgerCtrl provides comprehensive ERP solutions including accounting, inventory control, and HR payroll systems tailored for African businesses. Streamline operations with our cloud-based platform.">
+<meta name="keywords" content="ERP software Africa, Ledger control, business accounting system, inventory management, HR payroll solutions, African ERP, enterprise resource planning, LedgerCtrl, financial management software, farm Management tool, kenyan erp, project managenet tool , pos system, ERP">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ledgerctrl.com">
+<meta property="og:title" content="LedgerCtrl ERP | Business Management Software for African Enterprises">
+<meta property="og:description" content="Comprehensive accounting, inventory & HR solutions tailored for African businesses. Streamline operations with our ERP platform.">
+<meta property="og:image" content="https://ledgerctrl.com/images/ledgerctrldashboard.png">
+<meta property="og:site_name" content="LedgerCtrl">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://ledgerctrl.com">
+<meta property="twitter:title" content="LedgerCtrl ERP | Business Management Software for African Enterprises">
+<meta property="twitter:description" content="Comprehensive accounting, inventory & HR solutions tailored for African businesses. Streamline operations with our ERP platform.">
+<meta property="twitter:image" content="https://ledgerctrl.com/images/ledgerctrldashboard.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://ledgerctrl.com" />
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "LedgerCtrl",
+  "url": "https://ledgerctrl.com/",
+  "logo": "https://ledgerctrl.com/images/LEDGRCTRLLogo.png",
+  "description": "Provider of comprehensive ERP solutions for African businesses",
+  "sameAs": [
+    "https://facebook.com/ledgerctrl",
+    "https://twitter.com/ledgerctrl",
+    "https://linkedin.com/company/ledgerctrl"
+  ]
+}
+</script>
+{% endblock %}
 
 {% block page_content %}
 <!-- Hero Section -->
-<section class="hero-section" style="padding-bottom: 1rem;" >
+<section class="hero-section" style="padding-bottom: 1rem;" aria-label="Main product introduction">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 hero-content">
-                <h1 class="wow fadeInUp">Africa's Leading ERP Solutions for Your Business</h1>
-                <p class="lead wow fadeInUp" data-wow-delay="0.2s">Streamline your operations with our comprehensive enterprise resource planning software.</p>
+                <h1 class="wow fadeInUp">Transform Your Business With Africa's Leading ERP Solution</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.2s">Streamline accounting, inventory, and HR operations with LedgerCtrl's comprehensive enterprise management platform.</p>
                 <div class="hero-buttons wow fadeInUp" data-wow-delay="0.4s">
-                                    <h5 class="text-muted mb-4">TRUSTED BY INDUSTRY LEADERS</h5>
-
-                    <a href="/request-demo" class="btn btn-primary btn-lg mr-3">Request Demo</a>
-                    <a href="/contact" class="btn btn-primary btn-lg mr-3">Contact Us</a>
+                    <h5 class="text-muted mb-4">TRUSTED BY INDUSTRY LEADERS</h5>
+                    <a href="/request-demo" class="btn btn-primary btn-lg mr-3" aria-label="Request a demo of LedgerCtrl">Request Demo</a>
+                    <a href="/contact" class="btn btn-primary btn-lg mr-3" aria-label="Contact LedgerCtrl">Contact Us</a>
                 </div>
             </div>
             <div class="col-md-6 wow fadeIn">
-                <img src="images/ledgerctrldashboard.png" alt="ERP Dashboard" class="img-fluid">
+                <img src="images/ledgerctrldashboard.png" alt="LedgerCtrl ERP Dashboard showing financial analytics" class="img-fluid" loading="lazy">
             </div>
         </div>
     </div>
 </section>
 
-<!-- Clients Logo Section -->
-<!-- <section class="clients-section py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h5 class="text-muted mb-4">TRUSTED BY INDUSTRY LEADERS</h5>
-                <div class="client-logos">
-                    <img src="./images/icons8-customer-100.png" alt="Client 1" class="img-fluid">
-                    <img src="/assets/theme/images/clients/client2.png" alt="Client 2" class="img-fluid">
-                    <img src="/assets/theme/images/clients/client3.png" alt="Client 3" class="img-fluid">
-                    <img src="/assets/theme/images/clients/client4.png" alt="Client 4" class="img-fluid">
-                    <img src="/assets/theme/images/clients/client5.png" alt="Client 5" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <!-- Features Section -->
-<section class="features-section py-5 bg-light">
+<section class="features-section py-5 bg-light" aria-labelledby="ourSolutionsHeading">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center mb-5">
-                <h2 class="section-title wow fadeInUp">Our Solutions</h2>
-                <p class="section-subtitle wow fadeInUp" data-wow-delay="0.2s">Comprehensive modules to manage your entire business</p>
+                <h2 class="section-title wow fadeInUp" id="ourSolutionsHeading">Our Comprehensive Solutions</h2>
+                <p class="section-subtitle wow fadeInUp" data-wow-delay="0.2s">Integrated modules to manage all aspects of your business</p>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 mb-4 wow fadeInUp">
-                <div class="feature-card">
+                <div class="feature-card h-100">
                     <div class="feature-icon">
-                        <i class="fa fa-calculator"></i>
+                        <i class="fa fa-calculator" aria-hidden="true"></i>
                     </div>
-                    <h3>Accounting</h3>
-                    <p>Complete financial management including general ledger, accounts payable/receivable, and reporting.</p>
-                    <a href="/solutions/accounting" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    <h3>Accounting & Financials</h3>
+                    <p>Complete financial management system with general ledger, accounts payable/receivable, tax compliance, and real-time reporting.</p>
+                    <a href="/solutions/accounting" class="read-more" aria-label="Learn more about Accounting solutions">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="feature-card">
+                <div class="feature-card h-100">
                     <div class="feature-icon">
-                        <i class="fa fa-warehouse"></i>
+                        <i class="fa fa-warehouse" aria-hidden="true"></i>
                     </div>
-                    <h3>Inventory</h3>
-                    <p>Track stock levels, manage warehouses, and optimize your supply chain operations.</p>
-                    <a href="/solutions/inventory" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    <h3>Inventory Control</h3>
+                    <p>Advanced inventory tracking, warehouse management, procurement, and supply chain optimization tools.</p>
+                    <a href="/solutions/inventory" class="read-more" aria-label="Learn more about Inventory solutions">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="feature-card">
+                <div class="feature-card h-100">
                     <div class="feature-icon">
-                        <i class="fa fa-users"></i>
+                        <i class="fa fa-users" aria-hidden="true"></i>
                     </div>
-                    <h3>HR & Payroll</h3>
-                    <p>Manage your workforce, track attendance, process payroll, and handle employee benefits.</p>
-                    <a href="/solutions/hr-payroll" class="read-more">Learn More <i class="fa fa-arrow-right"></i></a>
+                    <h3>HR & Payroll System</h3>
+                    <p>Complete workforce management including attendance tracking, payroll processing, benefits administration, and compliance.</p>
+                    <a href="/solutions/hr-payroll" class="read-more" aria-label="Learn more about HR solutions">Learn More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -87,85 +110,36 @@
 </section>
 
 <!-- About Section -->
-<section class="about-section py-5">
+<section class="about-section py-5" aria-labelledby="aboutLedgerCtrl">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 wow fadeIn">
-                <img src="images/LEDGRCTRLLogo.png" alt="About LedgerCtrl" class="img-fluid rounded">
+                <img src="images/LEDGRCTRLLogo.png" alt="LedgerCtrl company logo" class="img-fluid rounded" loading="lazy">
             </div>
             <div class="col-md-6 wow fadeInUp">
-                <h2 class="section-title">About LedgerCtrl</h2>
-                <p>LedgerCtrl is a leading provider of ERP solutions designed to help businesses of all sizes streamline their operations and improve efficiency.</p>
-                <p>With years of experience in the industry, our team of experts has developed a comprehensive suite of tools that address the unique challenges faced by modern businesses.</p>
+                <h2 class="section-title" id="aboutLedgerCtrl">About LedgerCtrl</h2>
+                <p>LedgerCtrl is a leading African provider of enterprise resource planning solutions, helping businesses optimize their financial and operational processes.</p>
+                <p>Our platform is specifically designed to address the unique challenges faced by businesses operating in African markets, with localization for tax regulations, reporting requirements, and business practices.</p>
                 <ul class="about-features">
-                    <li><i class="fa fa-check-circle"></i> Customizable solutions</li>
-                    <li><i class="fa fa-check-circle"></i> Cloud-based or on-premise</li>
-                    <li><i class="fa fa-check-circle"></i> 24/7 customer support</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> Customizable for your business needs</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> Secure cloud or on-premise deployment</li>
+                    <li><i class="fa fa-check-circle" aria-hidden="true"></i> Dedicated regional support teams</li>
                 </ul>
-                <a href="/about" class="btn btn-outline-primary">Read More</a>
+                <a href="/about" class="btn btn-outline-primary" aria-label="Learn more about our company">Read More</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<!-- <section class="testimonials-section py-5 bg-primary text-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center mb-5">
-                <h2 class="section-title wow fadeInUp">What Our Clients Say</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 mb-4 wow fadeInUp">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"LedgerCtrl transformed our financial operations. The reporting tools alone saved us 20 hours per week in manual work."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="/assets/theme/images/testimonials/client1.jpg" alt="Client" class="rounded-circle">
-                        <h5>John Smith</h5>
-                        <p>CFO, TechCorp</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The inventory management module helped us reduce stockouts by 35% and improved our order fulfillment rate."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="/assets/theme/images/testimonials/client2.jpg" alt="Client" class="rounded-circle">
-                        <h5>Sarah Johnson</h5>
-                        <p>Operations Manager, RetailCo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Implementation was smooth and the support team was responsive to all our customization requests."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="/assets/theme/images/testimonials/client3.jpg" alt="Client" class="rounded-circle">
-                        <h5>Michael Brown</h5>
-                        <p>IT Director, Manufacturing Inc</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <!-- CTA Section -->
-<section class="cta-section py-5">
+<section class="cta-section py-5 bg-primary text-white" aria-labelledby="readyToTransform">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center wow fadeInUp">
-                <h2>Ready to Transform Your Business?</h2>
-                <p class="lead mb-4">Get started with LedgerCtrl today and experience the difference.</p>
-                <a href="/request-demo" class="btn btn-primary btn-lg mr-3">Request Demo</a>
-                <a href="/contact" class="btn btn-outline-primary btn-lg">Contact Sales</a>
+                <h2 id="readyToTransform">Ready to Transform Your Business Operations?</h2>
+                <p class="lead mb-4">Join hundreds of businesses using LedgerCtrl to streamline their financial and operational processes.</p>
+                <a href="/request-demo" class="btn btn-light btn-lg mr-3" aria-label="Request a demo">Request Demo</a>
+                <a href="/contact" class="btn btn-outline-light btn-lg" aria-label="Contact sales">Contact Sales</a>
             </div>
         </div>
     </div>
