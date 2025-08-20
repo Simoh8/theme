@@ -45,6 +45,10 @@ website_route_rules = [
     {"from_route": "/", "to_route": "home"},
 ]
 
+def include_js():
+    return [
+        "/assets/js/theme.js"
+    ]
 
 # website_context = {
 # 	"favicon": "/assets/theme/images/favicon.png",

@@ -25,48 +25,31 @@ def subscribe_newsletter(email):
         
     return "success"
 
+import frappe
+from frappe import _
+
 @frappe.whitelist(allow_guest=True)
 def submit_contact_form(name, email, subject, message):
-    """Process contact form submission"""
-    # Create a new Lead or Communication
-    lead = frappe.get_doc({
-        "doctype": "Lead",
-        "lead_name": name,
-        "email_id": email,
-        "subject": subject or "Contact Form Submission",
-        "message": message,
-        "source": "Website"
-    })
-    lead.insert(ignore_permissions=True)
+    """Send contact form submission via email only"""
     
-    # Create a communication record
-    comm = frappe.get_doc({
-        "doctype": "Communication",
-        "subject": subject or "Contact Form Submission",
-        "content": message,
-        "sender": email,
-        "sender_full_name": name,
-        "communication_medium": "Email",
-        "sent_or_received": "Received",
-        "status": "Open"
-    })
-    comm.insert(ignore_permissions=True)
-    
-    # Send notification email
+    # Send email notification
+    frappe.throw("simpon is using the contact form ")
     frappe.sendmail(
         recipients=["simomutu8@gmail.com"],
-        subject=f"New Contact Form Submission: {subject}",
+        subject=f"New Contact Form Submission: {subject or 'No Subject'}",
         message=f"""
-        <p>You have received a new contact form submission:</p>
-        <p><strong>Name:</strong> {name}</p>
-        <p><strong>Email:</strong> {email}</p>
-        <p><strong>Subject:</strong> {subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>{message}</p>
-        """
+            <p>You have received a new contact form submission:</p>
+            <p><strong>Name:</strong> {name}</p>
+            <p><strong>Email:</strong> {email}</p>
+            <p><strong>Subject:</strong> {subject}</p>
+            <p><strong>Message:</strong></p>
+            <p>{message}</p>
+        """,
+        delayed=False
     )
-    
+
     return "success"
+
 
 @frappe.whitelist(allow_guest=True)
 def submit_demo_request(data):

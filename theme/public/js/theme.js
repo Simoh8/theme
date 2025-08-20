@@ -1,8 +1,6 @@
 frappe.ready(function() {
-    // Initialize WOW.js for animations
     new WOW().init();
     
-    // Smooth scrolling for anchor links
     $('a[href*="#"]').on('click', function(e) {
         e.preventDefault();
         
@@ -15,7 +13,6 @@ frappe.ready(function() {
         );
     });
     
-    // Newsletter form submission
     $('.newsletter-form').submit(function(e) {
         e.preventDefault();
         var email = $(this).find('input[type="email"]').val();
@@ -34,11 +31,10 @@ frappe.ready(function() {
         });
     });
     
-    // Contact form submission
     $('#contact-form').submit(function(e) {
         e.preventDefault();
         frappe.call({
-            method: "theme.api.submit_contact_form",
+            method: "theme.theme.api.submit_contact_form",
             args: {
                 name: $(this).find("input[name='name']").val(),
                 email: $(this).find("input[name='email']").val(),
@@ -54,7 +50,6 @@ frappe.ready(function() {
         });
     });
     
-    // Navbar background change on scroll
     $(window).scroll(function() {
         if ($(this).scrollTop() > 50) {
             $('.navbar').addClass('navbar-scrolled');
@@ -64,16 +59,13 @@ frappe.ready(function() {
     });
 });
 
-// Demo Request Form Handling
 $('#demo-request-form').submit(function(e) {
     e.preventDefault();
     var btn = $(this).find('[type="submit"]');
     var btn_text = btn.html();
     
-    // Disable button and show spinner
     btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Processing...');
     
-    // Get form data
     var form_data = {
         full_name: $('#full-name').val(),
         company: $('#company').val(),
@@ -146,11 +138,10 @@ $('#contact-form').submit(function(e) {
     var btn = $(this).find('[type="submit"]');
     var btn_text = btn.html();
     
-    // Disable button and show spinner
     btn.prop('disabled', true).html('<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Sending...');
     
     frappe.call({
-        method: "theme.api.submit_contact_form",
+        method: "theme.theme.api.submit_contact_form",
         args: {
             name: $('#name').val(),
             email: $('#email').val(),
@@ -178,12 +169,10 @@ $('#contact-form').submit(function(e) {
     });
 });
 
-// Initialize all tooltips
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 });
 
-// Smooth scrolling for solution page anchor links
 $('a[href^="#"]').on('click', function(e) {
     e.preventDefault();
     
@@ -196,10 +185,8 @@ $('a[href^="#"]').on('click', function(e) {
     );
 });
 
-// Initialize WOW.js for animations on solution pages
 new WOW().init();
 
-// Solution page form handling
 $('.solution-form').submit(function(e) {
     e.preventDefault();
     var form = $(this);
