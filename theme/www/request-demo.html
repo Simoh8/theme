@@ -176,4 +176,54 @@
         <a href="tel:+15551234567" class="btn btn-outline-light btn-lg"><i class="fa fa-phone mr-2"></i> Call Now</a>
     </div>
 </section>
+
+<script>
+frappe.ready(function() {
+    $('#demo-request-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        let form_data = {
+            full_name: $('#full-name').val(),
+            company: $('#company').val(),
+            email: $('#email').val(),
+            phone: $('#phone').val(),
+            job_title: $('#job-title').val(),
+            industry: $('#industry').val(),
+            solutions: [],
+            message: $('#message').val(),
+            subscribe: $('#subscribe').is(':checked')
+        };
+        
+        // Get selected solutions
+        $('input[name="solutions"]:checked').each(function() {
+            form_data.solutions.push($(this).val());
+        });
+        
+        // Submit form
+        frappe.call({
+            method: 'ledgerctrl.www.demo.submit_demo_request',
+            args: {
+                data: form_data
+            },
+            callback: function(r) {
+                if (r.message === 'success') {
+                    frappe.msgprint({
+                        message: 'Thank you for your demo request! We will contact you shortly.',
+                        title: 'Success',
+                        indicator: 'green'
+                    });
+                    $('#demo-request-form')[0].reset();
+                } else {
+                    frappe.msgprint({
+                        message: 'There was an error submitting your request. Please try again.',
+                        title: 'Error',
+                        indicator: 'red'
+                    });
+                }
+            }
+        });
+    });
+});
+</script>
 {% endblock %}

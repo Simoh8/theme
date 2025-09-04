@@ -51,58 +51,97 @@ def submit_contact_form(name, email, subject, message):
     return "success"
 
 
+
+
+
+
 @frappe.whitelist(allow_guest=True)
 def submit_demo_request(data):
-    """Process demo request form submission"""
-    # Create a new Lead
-    lead = frappe.get_doc({
-        "doctype": "Lead",
-        "lead_name": data.get('full_name'),
-        "company_name": data.get('company'),
-        "email_id": data.get('email'),
-        "phone": data.get('phone'),
-        "job_title": data.get('job_title'),
-        "industry": data.get('industry'),
-        "notes": f"Solutions Interested In: {data.get('solutions', '')}\n\nMessage: {data.get('message', '')}",
-        "source": "Website Demo Request",
-        "status": "Lead"
-    })
-    lead.insert(ignore_permissions=True)
+    """Process demo request form submission and send to email only"""
+    # Parse the data if it's a JSON string
+    if isinstance(data, str):
+        import json
+        data = json.loads(data)
     
-    # Create Opportunity if applicable
-    opportunity = frappe.get_doc({
-        "doctype": "Opportunity",
-        "opportunity_from": "Lead",
-        "party_name": lead.name,
-        "contact_email": data.get('email'),
-        "opportunity_type": "Demo Request",
-        "with_items": 0,
-        "transaction_date": frappe.utils.nowdate(),
-        "status": "Demo Scheduled"
-    })
-    opportunity.insert(ignore_permissions=True)
+    # Extract form data
+    full_name = data.get('full_name')
+    company = data.get('company')
+    email = data.get('email')
+    phone = data.get('phone')
+    job_title = data.get('job_title')
+    industry = data.get('industry')
+    solutions = data.get('solutions', [])
+    message = data.get('message')
+    subscribe = data.get('subscribe')
     
-    # Add to email group if subscribed
-    if data.get('subscribe') == 'Yes':
-        if not frappe.db.exists("Email Group", _("Website")):
-            email_group = frappe.get_doc({
-                "doctype": "Email Group",
-                "title": _("Website")
-            })
-            email_group.insert(ignore_permissions=True)
+    # Format solutions as a string if it's a list
+    if isinstance(solutions, list):
+        solutions_str = ", ".join(solutions)
+    else:
+        solutions_str = str(solutions)
+    
+    # Send notification email
+    email_subject = f"New Demo Request: {company} ({full_name})"
+    
+    email_body = f"""
+    <h2>New Demo Request Received</h2>
+    
+    <h3>Contact Information</h3>
+    <p><strong>Name:</strong> {full_name}</p>
+    <p><strong>Company:</strong> {company}</p>
+    <p><strong>Email:</strong> {email}</p>
+    <p><strong>Phone:</strong> {phone or 'Not provided'}</p>
+    <p><strong>Job Title:</strong> {job_title or 'Not provided'}</p>
+    <p><strong>Industry:</strong> {industry or 'Not provided'}</p>
+    
+    <h3>Solutions Interested In</h3>
+    <p>{solutions_str or 'Not specified'}</p>
+    
+    <h3>Additional Message</h3>
+    <p>{message or 'No additional message'}</p>
+    
+    <p><strong>Subscribed to newsletter:</strong> {'Yes' if subscribe else 'No'}</p>
+    
+    <p>This demo request was submitted through the website form.</p>
+    """
+    
+    # Send email to your address
+    frappe.sendmail(
+        recipients=["simomutu8@gmail.com"],  # Replace with your email
+        subject=email_subject,
+        message=email_body,
+        delayed=False
+    )
+    
+    # Send confirmation email to the requester
+    if email:
+        user_subject = "Thank you for your demo request - LedgerCtrl"
         
-        if not frappe.db.exists("Email Group Member", {"email": data.get('email'), "email_group": _("Website")}):
-            subscriber = frappe.get_doc({
-                "doctype": "Email Group Member",
-                "email": data.get('email'),
-                "email_group": _("Website")
-            })
-            subscriber.insert(ignore_permissions=True)
-    
-    # Send notification emails
-    send_demo_request_notification(data, lead.name, opportunity.name)
+        user_message = f"""
+        <p>Dear {full_name},</p>
+        
+        <p>Thank you for requesting a demo of LedgerCtrl. We've received your request with the following details:</p>
+        
+        <p><strong>Company:</strong> {company}</p>
+        <p><strong>Interested In:</strong> {solutions_str or 'Not specified'}</p>
+        
+        <p>Our team will review your request and contact you within 24 hours to schedule your demo at a time that's convenient for you.</p>
+        
+        <p>If you have any immediate questions, feel free to reply to this email or call us.</p>
+        
+        <p>Best regards,<br>
+        The LedgerCtrl Team</p>
+        """
+        
+        frappe.sendmail(
+            recipients=[email],
+            subject=user_subject,
+            message=user_message,
+            now=True
+        )
     
     return "success"
+
 
 def send_demo_request_notification(data, lead_name, opportunity_name):
     """Send notification emails about the demo request"""
