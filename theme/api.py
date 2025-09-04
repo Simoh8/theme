@@ -69,6 +69,8 @@ def submit_contact_form(name, email, subject, message, subscribe=False):
 
 
 
+
+
 @frappe.whitelist(allow_guest=True)
 def submit_demo_request(full_name, company, email, phone=None, job_title=None, industry=None, solutions=None, message=None, subscribe=False):
     """Process demo request form submission and send to email only"""
@@ -140,6 +142,11 @@ def submit_demo_request(full_name, company, email, phone=None, job_title=None, i
         )
     
     return "success"
+
+
+
+
+
 
 def send_demo_request_notification(data, lead_name, opportunity_name):
     """Send notification emails about the demo request"""
