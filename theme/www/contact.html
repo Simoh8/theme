@@ -182,5 +182,61 @@
     </div>
 </section>
 <script src="/assets/js/theme.js"></script>
+<script>
+frappe.ready(function() {
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        let form_data = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            subject: $('#subject').val(),
+            message: $('#message').val(),
+            subscribe: $('#subscribe').is(':checked') ? 1 : 0
+        };
+        
+        // Show loading indicator
+        let btn = $(this).find('button[type="submit"]');
+        let original_text = btn.text();
+        btn.html('<i class="fa fa-spinner fa-spin"></i> Sending...').prop('disabled', true);
+        
+        // Submit form
+        frappe.call({
+            method: 'theme.api.submit_contact_form',
+            args: form_data,
+            callback: function(r) {
+                // Restore button
+                btn.text(original_text).prop('disabled', false);
+                
+                if (r.message === 'success') {
+                    frappe.msgprint({
+                        message: 'Thank you for your message! We will get back to you soon.',
+                        title: 'Success',
+                        indicator: 'green'
+                    });
+                    $('#contact-form')[0].reset();
+                } else {
+                    frappe.msgprint({
+                        message: 'There was an error sending your message. Please try again.',
+                        title: 'Error',
+                        indicator: 'red'
+                    });
+                }
+            },
+            error: function() {
+                // Restore button on error
+                btn.text(original_text).prop('disabled', false);
+                frappe.msgprint({
+                    message: 'There was an error sending your message. Please try again.',
+                    title: 'Error',
+                    indicator: 'red'
+                });
+            }
+        });
+    });
+});
+</script>
+
 
 {% endblock %}

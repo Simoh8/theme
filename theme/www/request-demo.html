@@ -192,7 +192,7 @@ frappe.ready(function() {
             industry: $('#industry').val(),
             solutions: [],
             message: $('#message').val(),
-            subscribe: $('#subscribe').is(':checked')
+            subscribe: $('#subscribe').is(':checked') ? 1 : 0
         };
         
         // Get selected solutions
@@ -200,13 +200,19 @@ frappe.ready(function() {
             form_data.solutions.push($(this).val());
         });
         
+        // Show loading indicator
+        let btn = $(this).find('button[type="submit"]');
+        let original_text = btn.text();
+        btn.html('<i class="fa fa-spinner fa-spin"></i> Processing...').prop('disabled', true);
+        
         // Submit form
         frappe.call({
-            method: 'ledgerctrl.www.demo.submit_demo_request',
-            args: {
-                data: form_data
-            },
+            method: 'theme.api.submit_demo_request',
+            args: form_data,
             callback: function(r) {
+                // Restore button
+                btn.text(original_text).prop('disabled', false);
+                
                 if (r.message === 'success') {
                     frappe.msgprint({
                         message: 'Thank you for your demo request! We will contact you shortly.',
@@ -221,6 +227,15 @@ frappe.ready(function() {
                         indicator: 'red'
                     });
                 }
+            },
+            error: function() {
+                // Restore button on error
+                btn.text(original_text).prop('disabled', false);
+                frappe.msgprint({
+                    message: 'There was an error submitting your request. Please try again.',
+                    title: 'Error',
+                    indicator: 'red'
+                });
             }
         });
     });
